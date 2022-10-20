@@ -71,7 +71,6 @@ int print_rev(va_list l, flags_t *f)
  */
 int print_rot13(va_list l, flags_t *f)
 {
-<<<<<<< HEAD
 	int i, j;
 	char rot13[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char ROT13[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
@@ -93,23 +92,6 @@ int print_rot13(va_list l, flags_t *f)
 	}
 
 	return (j);
-=======
-int i, j;
-char rot13[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-char ROT13[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
-char *s = va_arg(l, char *);
-(void)f;
-for (j = 0; s[j]; j++)
-{
-if (s[j] < 'A' || (s[j] > 'Z' && s[j] < 'a') || s[j] > 'z')
-_putchar(s[j]);
-else
-{
-for (i = 0; i <= 52; i++)
-if (s[j] == rot13[i])
-_putchar(ROT13[i]);
-}
->>>>>>> 54b1e137e044b339ad5619921ab46989ed8a2ab5
 }
 
 /**
